@@ -1,0 +1,23 @@
+namespace: 
+  name: prod
+
+service:
+  name: demo-service
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+image:
+  repository: nginx
+  tag: 1.17.0
+  pullPolicy: IfNotPresent
+
+replicaCount: 2
+
+resources:
+  requests:
+    cpu: 70m
+    memory: 256Mi
+
+Configmap:
+  data: "version: 1.17.0"

@@ -1,0 +1,23 @@
+namespace: 
+  name: demo
+
+service:
+  name: demo-service
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+image:
+  repository: demo-repo/demo-image
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 3
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+Configmap:
+  data: "version:nginx"
