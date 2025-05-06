@@ -8,8 +8,8 @@ service:
   targetPort: 8080
 
 image:
-  repository: demo-repo/demo-image
-  tag: latest
+  repository: nginx
+  tag: alpine
   pullPolicy: IfNotPresent
 
 replicaCount: 3
@@ -19,5 +19,5 @@ resources:
     cpu: 100m
     memory: 128Mi
 
-Configmap:
+configmap:
   data: "version:nginx"
