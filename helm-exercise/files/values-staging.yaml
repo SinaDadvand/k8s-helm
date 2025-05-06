@@ -1,5 +1,5 @@
 namespace: 
-  name: prod
+  name: staging
 
 service:
   name: demo-service
